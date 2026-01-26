@@ -1,4 +1,3 @@
-// src/main/java/org/example/service/PrisijungimoService.java
 package org.example.service;
 
 import org.example.Vartotojas;

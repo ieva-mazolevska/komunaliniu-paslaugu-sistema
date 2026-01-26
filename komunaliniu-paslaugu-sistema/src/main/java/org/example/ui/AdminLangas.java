@@ -50,11 +50,11 @@ public class AdminLangas extends JFrame {
 
         area.setEditable(false);
 
-        // Top container with vertical layout (push panels down naturally)
+
         JPanel top = new JPanel();
         top.setLayout(new BoxLayout(top, BoxLayout.Y_AXIS));
 
-        // ===== Bendrijos panel =====
+        //Bendrijos panel
         JPanel bendrijosPanel = new JPanel();
         bendrijosPanel.setBorder(BorderFactory.createTitledBorder("Bendrijos (id, pavadinimas)"));
         bendrijosPanel.setLayout(new GridLayout(2, 1));
@@ -74,7 +74,7 @@ public class AdminLangas extends JFrame {
         bendrijosPanel.add(bRow1);
         bendrijosPanel.add(bRow2);
 
-        // ===== Paslaugos panel =====
+        //Paslaugos panel
         JPanel paslaugosPanel = new JPanel();
         paslaugosPanel.setBorder(BorderFactory.createTitledBorder("Paslaugos (id, pavadinimas, aprasymas)"));
         paslaugosPanel.setLayout(new GridLayout(2, 1));
@@ -96,7 +96,7 @@ public class AdminLangas extends JFrame {
         paslaugosPanel.add(pRow1);
         paslaugosPanel.add(pRow2);
 
-        // ===== Vartotojai panel =====
+        //Vartotojai panel
         JPanel vartotojaiPanel = new JPanel();
         vartotojaiPanel.setBorder(BorderFactory.createTitledBorder("Vartotojai (auto: pv=vardas, sl=pavarde)"));
         vartotojaiPanel.setLayout(new GridLayout(2, 1));
@@ -120,7 +120,7 @@ public class AdminLangas extends JFrame {
         vartotojaiPanel.add(vRow1);
         vartotojaiPanel.add(vRow2);
 
-        // Add panels to top
+
         top.add(bendrijosPanel);
         top.add(paslaugosPanel);
         top.add(vartotojaiPanel);
@@ -128,7 +128,7 @@ public class AdminLangas extends JFrame {
         add(top, BorderLayout.NORTH);
         add(new JScrollPane(area), BorderLayout.CENTER);
 
-        // ===== Listeners =====
+
         rodytiBendrijasBtn.addActionListener(e -> rodytiBendrijas());
         sukurtiBendrijaBtn.addActionListener(e -> sukurtiBendrija());
         redaguotiBendrijaBtn.addActionListener(e -> redaguotiBendrija());
@@ -146,14 +146,14 @@ public class AdminLangas extends JFrame {
 
         setVisible(true);
 
-        // Auto-load: show bendrijos + paslaugos
+        //show bendrijos + paslaugos
         area.setText("");
         rodytiBendrijas();
         area.append("\n");
         rodytiPaslaugas();
     }
 
-    // ===== Bendrijos =====
+    //Bendrijos
 
     private void rodytiBendrijas() {
         area.append("Bendrijos:\n");
@@ -201,7 +201,7 @@ public class AdminLangas extends JFrame {
         }
     }
 
-    // ===== Paslaugos =====
+    //Paslaugos
 
     private void rodytiPaslaugas() {
         area.append("Paslaugos:\n");
@@ -251,7 +251,7 @@ public class AdminLangas extends JFrame {
         }
     }
 
-    // ===== Vartotojai =====
+    //Vartotojai
 
     private void rodytiVartotojus() {
         area.setText("Vartotojai:\n");

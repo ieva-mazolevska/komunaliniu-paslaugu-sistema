@@ -13,6 +13,6 @@ public class DbConfig {
     // MySQL vartotojas
     public static final String USER = "root";
 
-    // MySQL slaptažodis (jei neturi – palik tuscia "")
+    // MySQL slaptažodis
     public static final String PASSWORD = "pi24sn";
 }
